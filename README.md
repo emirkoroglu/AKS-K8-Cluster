@@ -1,2 +1,3 @@
 # AKS-K8-Cluster-
-Azure Kubernetes Cluster
+Deploys a Kubernetes cluster on AKS with monitoring support through Azure Log Analytics
+
