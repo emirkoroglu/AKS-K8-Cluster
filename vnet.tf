@@ -5,4 +5,5 @@ module "network" {
   subnet_prefixes     = var.subnet_prefixes
   subnet_names        = var.subnet_names
   depends_on          = [azurerm_resource_group.example]
+  use_for_each        = true
 }

@@ -1,12 +1,7 @@
-# DevOps group to manage cluster
-resource "azuread_group" "example" {
-  display_name     = "DevOps"
-  mail_enabled     = true
-  mail_nickname    = "ExampleGroup"
+data "azuread_client_config" "current" {}
+
+resource "azuread_group" "Dev" {
+  display_name     = "Dev"
+  owners           = [data.azuread_client_config.current.object_id]
   security_enabled = true
-  types            = ["Unified"]
-  # members = [
-  # azuread_user.example.object_id,
-  # /* more users */
-  # ]
 }

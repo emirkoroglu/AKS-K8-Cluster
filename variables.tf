@@ -10,3 +10,5 @@ variable "subnet_names" {
 variable "agents_availability_zones" {
   type = list(any)
 }
+
+
