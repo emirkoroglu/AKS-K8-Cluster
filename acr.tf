@@ -19,3 +19,7 @@ resource "azurerm_role_assignment" "example" {
 }
 
 
+## attaching acr to AKS type below inside the AKS
+#az aks update -n CLUSTERNAME -g RESOURCEGROUPNAME --attach-acr ECRCONTAINERNAMEONLY
+##Check if AKS can connect to your ACR with below command
+#az aks check-acr --resource-group dev-env-resource-group --name devops-cluster-aks --acr devcontainerregistry33dev2.azurecr.io
